@@ -59,5 +59,18 @@ public class StudentArray {
         System.out.println("Wrong ID, Try again!");
         update(ID);
     }
+    public void delete(int ID){
+        for(int i=0; i<studentCount;i++){
+            if(student[i].ID==ID){
+                for(int j=i; j<studentCount-1; j++){
+                    student[j] = student[j+1];
+                }
+            break;
+            }
+
+        }
+        System.out.println("Wrong ID, Try again!");
+        delete(ID);
+    }
 
 }
