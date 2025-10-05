@@ -51,7 +51,7 @@ public class StudentArray {
                         update(ID);
                         break;
                 }
-                break;
+                return;
 
             }
 
@@ -65,7 +65,9 @@ public class StudentArray {
                 for(int j=i; j<studentCount-1; j++){
                     student[j] = student[j+1];
                 }
-            break;
+                student[studentCount-1]=null;
+                studentCount--;
+            return;
             }
 
         }
@@ -73,14 +75,14 @@ public class StudentArray {
         delete(ID);
     }
     public void displayStudentDetails(){
-        for(Student student1:student){
+        for(int i=0;i<studentCount;i++){
             System.out.println("=======================");
             System.out.println();
-            System.out.println("Student ID: "+student1.ID);
-            System.out.println("Student name: "+student1.name);
-            System.out.println("Degree: "+student1.degree);
-            System.out.println("Year: "+student1.year);
-            System.out.println("GPA: "+student1.GPA);
+            System.out.println("Student ID: "+student[i].ID);
+            System.out.println("Student name: "+student[i].name);
+            System.out.println("Degree: "+student[i].degree);
+            System.out.println("Year: "+student[i].year);
+            System.out.println("GPA: "+student[i].GPA);
             System.out.println();
             System.out.println("=======================");
 
