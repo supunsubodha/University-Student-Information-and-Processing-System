@@ -72,5 +72,19 @@ public class StudentArray {
         System.out.println("Wrong ID, Try again!");
         delete(ID);
     }
+    public void displayStudentDetails(){
+        for(Student student1:student){
+            System.out.println("=======================");
+            System.out.println();
+            System.out.println("Student ID: "+student1.ID);
+            System.out.println("Student name: "+student1.name);
+            System.out.println("Degree: "+student1.degree);
+            System.out.println("Year: "+student1.year);
+            System.out.println("GPA: "+student1.GPA);
+            System.out.println();
+            System.out.println("=======================");
+
+        }
+    }
 
 }
